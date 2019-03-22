@@ -10,6 +10,7 @@ county = 'Kitsap'
 
 arcpy.env.workspace = os.path.join(rootDir, inDir, county)
 
+# site address based (point file)
 AddressLocator_OutputPath = os.path.join(rootDir, "AddressLocators\\19kit_siteaddr")
 arcpy.CreateAddressLocator_geocoding(in_address_locator_style="US Address - Single House", 
                                      in_reference_data="siteaddr.shp 'Primary Table'", 
@@ -18,6 +19,7 @@ arcpy.CreateAddressLocator_geocoding(in_address_locator_style="US Address - Sing
                                      config_keyword="", 
                                      enable_suggestions="DISABLED")
 
+# street centerline based
 AddressLocator_OutputPath = os.path.join(rootDir, "AddressLocators\\19kit_stcl")
 arcpy.CreateAddressLocator_geocoding(in_address_locator_style="US Address - Dual Ranges", 
                                      in_reference_data="stcl.shp 'Primary Table'", 
