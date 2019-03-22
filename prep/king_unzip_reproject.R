@@ -11,4 +11,4 @@ unzip.files <- partial(unzip, junkpaths = TRUE)
 
 walk(files, unzip.files)
 
-source(file.path(repo.dir, "king_reporject.py"))
+source_python(file.path(repo.dir, "king_reproject.py"))
